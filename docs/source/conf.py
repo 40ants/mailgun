@@ -43,7 +43,7 @@ extensions = [
 from os.path import join, dirname, realpath, expandvars
 cl_systems = [
     {
-        'name': 'mailgun-test',
+        'name': 'mailgun',
         'path': join(dirname(realpath(__file__)), '../../'),
         'packages': [
             'mailgun',

@@ -44,6 +44,12 @@ domain there and to reveive an authentication token.
             do (mailgun:htm
                 (:li item)))))
 
+Roadmap
+=======
+
+* Add support for styles, build them with LASS and embed into an email's
+  markup.
+
 .. Everything after this comment will be omitted from HTML docs.
 .. include-to
 
@@ -69,7 +75,7 @@ documentation strings from lisp systems.
 
 Run these commands to build documentation::
 
-  virtualenv env
+  virtualenv --python python2.7 env
   source env/bin/activate
   pip install -r docs/requirements.txt
   invoke build_docs
