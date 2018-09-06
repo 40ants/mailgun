@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Welcome to mailgun’s documentation! &#8212; mailgun 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.6/yeti/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API" href="api.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          mailgun</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="changelog.html">Changelog</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Documentation <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">ChangeLog</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Welcome to mailgun&#8217;s documentation!</a><ul>
+<li><a class="reference internal" href="#reasoning">Reasoning</a></li>
+<li><a class="reference internal" href="#here-is-how-to-use-it">Here is how to use it</a></li>
+<li><a class="reference internal" href="#roadmap">Roadmap</a></li>
+<li><a class="reference internal" href="#contents">Contents</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="welcome-to-mailgun-s-documentation">
+<h1>Welcome to mailgun&#8217;s documentation!<a class="headerlink" href="#welcome-to-mailgun-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This library provides an easy way to send transactional emails through
+<a class="reference external" href="http://mailgun.com">http://mailgun.com</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>You don&#8217;t have to setup your own SMTP servers!</p>
+<p class="last">And they have a &#8220;free&#8221; plan with 10000 emails per month.</p>
+</div>
+<div class="section" id="reasoning">
+<h2>Reasoning<a class="headerlink" href="#reasoning" title="Permalink to this headline">¶</a></h2>
+<p>Previously, I used this code in one of my projects, but seems this
+functionality needed almost in any serious web application. So, I
+decided to make it available as a separate library.</p>
+</div>
+<div class="section" id="here-is-how-to-use-it">
+<h2>Here is how to use it<a class="headerlink" href="#here-is-how-to-use-it" title="Permalink to this headline">¶</a></h2>
+<p>First, setup an account at <a class="reference external" href="http://mailgun.com">http://mailgun.com</a>. You need to add your
+domain there and to reveive an authentication token.</p>
+<div class="highlight-common-lisp"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">setf</span> <span class="nv">mailgun:*domain*</span> <span class="s">&quot;mail.skazorama.ru&quot;</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setf</span> <span class="nv">mailgun:*api-key*</span> <span class="s">&quot;key-************************&quot;</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nv">mailgun:send</span> <span class="p">(</span><span class="s">&quot;noreply@skazorama.ru&quot;</span>
+               <span class="s">&quot;svetlyak.40wt@gmail.com&quot;</span>
+               <span class="s">&quot;Mail subject&quot;</span><span class="p">)</span>
+  <span class="p">(</span><span class="ss">:h1</span> <span class="s">&quot;This is a test letter&quot;</span><span class="p">)</span>
+  <span class="p">(</span><span class="ss">:p</span> <span class="s">&quot;It is in a HTML format and supports some tags&quot;</span>
+      <span class="s">&quot;For example, I can make &quot;</span> <span class="p">(</span><span class="ss">:b</span> <span class="s">&quot;a bold text&quot;</span><span class="p">)</span> <span class="s">&quot;.&quot;</span><span class="p">)</span>
+  <span class="p">(</span><span class="ss">:p</span> <span class="s">&quot;And here we have some items, passed to the template:&quot;</span><span class="p">)</span>
+  <span class="p">(</span><span class="ss">:ul</span>
+   <span class="p">(</span><span class="nb">loop</span> <span class="nv">for</span> <span class="nv">item</span> <span class="nv">in</span> <span class="nv">items</span>
+         <span class="nb">do</span> <span class="p">(</span><span class="nv">mailgun:htm</span>
+             <span class="p">(</span><span class="ss">:li</span> <span class="nv">item</span><span class="p">)))))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="roadmap">
+<h2>Roadmap<a class="headerlink" href="#roadmap" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Add support for styles, build them with LASS and embed into an email&#8217;s
+markup.</li>
+</ul>
+</div>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">ChangeLog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id1">0.1.0</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="_sources/index.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, Alexander Artemenko.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
