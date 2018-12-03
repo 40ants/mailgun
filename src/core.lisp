@@ -10,7 +10,10 @@
 
   (:export
    #:send
-   #:test-send))
+   #:test-send
+   #:*domain*
+   #:*api-key*
+   #:*user-agent*))
 (in-package mailgun/core)
 
 
