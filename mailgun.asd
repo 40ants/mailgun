@@ -1,12 +1,11 @@
 (defsystem mailgun
+           :description "A thin wrapper to post HTML emails through mailgun.com"
            :version (:read-file-form "version.lisp-expr")
            :author "Alexander Artemenko"
-           :license ""
+           :license "Unlicense"
            :class :package-inferred-system
            :pathname "src"
-           :depends-on (
-                                   "mailgun/core")
-           :description ""
+           :depends-on ("mailgun/core")
            :long-description
            #.(with-open-file (stream (merge-pathnames
                                       #p"README.rst"
