@@ -2,6 +2,11 @@
  ChangeLog
 ===========
 
+0.2.0 (2021-01-24)
+==================
+
+* Added support for ``secret-values``.
+
 0.1.2
 =====
 

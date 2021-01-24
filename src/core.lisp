@@ -18,7 +18,8 @@
 
 
 (defvar *domain* nil)
-(defvar *api-key* nil)
+(defvar *api-key* nil
+  "This can be a string or secret-values:secret-value.")
 (defvar *user-agent* "cl-mailgun")
 
 
@@ -37,7 +38,7 @@
     (post (format nil "https://api.mailgun.net/v3/~A/messages"
                   *domain*)
           :basic-auth (cons "api"
-                            *api-key*)
+                            (ensure-value-revealed *api-key*))
           :content data
           :headers headers)
     
