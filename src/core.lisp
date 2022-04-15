@@ -7,6 +7,8 @@
   (:import-from #:spinneret
                 #:with-html-string
                 #:with-html)
+  (:import-from #:secret-values
+                #:ensure-value-revealed)
 
   (:export
    #:send
